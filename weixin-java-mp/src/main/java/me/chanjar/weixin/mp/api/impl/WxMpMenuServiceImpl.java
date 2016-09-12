@@ -6,6 +6,7 @@ import me.chanjar.weixin.common.util.http.SimpleGetRequestExecutor;
 import me.chanjar.weixin.common.util.http.SimplePostRequestExecutor;
 import me.chanjar.weixin.mp.api.WxMpMenuService;
 import me.chanjar.weixin.mp.api.WxMpService;
+import me.chanjar.weixin.mp.util.storage.WxMpConfigStorageUtil;
 
 /**
  * Created by Binary Wang on 2016/7/21.
@@ -21,6 +22,7 @@ public class WxMpMenuServiceImpl implements WxMpMenuService {
 
   @Override
   public void menuCreate(WxMenu menu) throws WxErrorException {
+	  WxMpConfigStorageUtil.setCurrentAppId(menu.getAppId());
     if (menu.getMatchRule() != null) {
       String url = API_URL_PREFIX + "/addconditional";
       this.wxMpService.execute(new SimplePostRequestExecutor(), url, menu.toJson());

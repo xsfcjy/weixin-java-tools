@@ -1,0 +1,11 @@
+<xml>
+    <appId>wx376cec5258d1e324</appId>
+    <secret>9d7db6d7d84b2d5db26c411aa9265ce7</secret>
+    <token>Sfxie123456</token>
+    <aesKey>h0UA5sid1pdbxGFuYEEReMyfmSxZJNJZdz9gnEQ17ZT</aesKey>
+    <accessToken></accessToken>
+    <expiresTime>4000</expiresTime>
+    <openId>xsfcjy</openId>
+    <oauth2redirectUri>http://xsfcjy.oicp.net/weixin</oauth2redirectUri>
+    <kfAccount></kfAccount>
+</xml>

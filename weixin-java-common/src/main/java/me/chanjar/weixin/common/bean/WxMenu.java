@@ -14,7 +14,7 @@ import me.chanjar.weixin.common.util.json.WxGsonBuilder;
  * @author Daniel Qian
  *
  */
-public class WxMenu implements Serializable {
+public class WxMenu extends WxBaseBean{
 
   private static final long serialVersionUID = -7083914585539687746L;
 
@@ -65,9 +65,14 @@ public class WxMenu implements Serializable {
         '}';
   }
 
-  public static class WxMenuButton {
+  public static class WxMenuButton implements Serializable{
 
-    private String type;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private String type;
     private String name;
     private String key;
     private String url;
@@ -126,8 +131,12 @@ public class WxMenu implements Serializable {
     }
   }
   
-  public static class WxMenuRule {
-    private String tagId;
+  public static class WxMenuRule implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String tagId;
     private String sex;
     private String country;
     private String province;
